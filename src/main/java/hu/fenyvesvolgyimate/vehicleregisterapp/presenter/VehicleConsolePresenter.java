@@ -1,9 +1,9 @@
-package org.example.presenter;
+package hu.fenyvesvolgyimate.vehicleregisterapp.presenter;
 
 
-import org.example.dto.VehicleDTO;
-import org.example.parser.JsonParser;
-import org.example.parser.VehicleDTOParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dto.VehicleDTO;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.JsonParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleDTOParser;
 
 public class VehicleConsolePresenter implements VehicleUserInterface {
      VehicleDTOParser vehicleParser = new VehicleDTOParser();

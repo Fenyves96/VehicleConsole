@@ -1,8 +1,8 @@
-package org.example.controller;
+package hu.fenyvesvolgyimate.vehicleregisterapp.controller;
 
-import org.example.dto.VehicleDTO;
-import org.example.interactor.VehicleRegister;
-import org.example.parser.VehicleDTOParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dto.VehicleDTO;
+import hu.fenyvesvolgyimate.vehicleregisterapp.interactor.VehicleRegister;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleDTOParser;
 
 import java.util.Scanner;
 

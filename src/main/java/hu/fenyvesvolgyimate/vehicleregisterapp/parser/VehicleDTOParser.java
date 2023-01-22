@@ -1,6 +1,6 @@
-package org.example.parser;
+package hu.fenyvesvolgyimate.vehicleregisterapp.parser;
 
-import org.example.dto.VehicleDTO;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dto.VehicleDTO;
 import org.json.JSONException;
 import org.json.JSONObject;
 
