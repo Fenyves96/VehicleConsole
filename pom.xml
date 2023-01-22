@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>hu.fenyvesvolgyimate.vehicleregisterapp</groupId>
-            <artifactId>VehicleRegister</artifactId>
+            <artifactId>VehicleRegisterBusinessRules</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
