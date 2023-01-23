@@ -6,7 +6,7 @@ import hu.fenyvesvolgyimate.vehicleregisterapp.parser.JsonParser;
 import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleDTOParser;
 import hu.fenyvesvolgyimate.vehicleregisterapp.view.VehicleConsoleView;
 
-public class VehicleConsolePresenter implements VehicleUserInterface {
+public class VehiclePresenterImpl implements VehiclePresenter {
      VehicleDTOParser vehicleParser = new VehicleDTOParser();
      JsonParser jsonParser = new JsonParser();
 
