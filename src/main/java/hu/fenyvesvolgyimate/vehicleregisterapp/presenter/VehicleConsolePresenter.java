@@ -4,6 +4,7 @@ package hu.fenyvesvolgyimate.vehicleregisterapp.presenter;
 import hu.fenyvesvolgyimate.vehicleregisterapp.dto.VehicleDTO;
 import hu.fenyvesvolgyimate.vehicleregisterapp.parser.JsonParser;
 import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleDTOParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.view.VehicleConsoleView;
 
 public class VehicleConsolePresenter implements VehicleUserInterface {
      VehicleDTOParser vehicleParser = new VehicleDTOParser();
@@ -24,12 +25,12 @@ public class VehicleConsolePresenter implements VehicleUserInterface {
                 vehicleDTO.getModel(),
                 vehicleDTO.getNumberOfSeats(),
                 vehicleDTO.getVehicleType());
-        System.out.println(message);
+        VehicleConsoleView.display(message);
     }
 
     @Override
     public void displayMessage(String json) {
         String message = jsonParser.parseStringValueFromJsonStringByKey(json, "message");
-        System.out.println(message);
+        VehicleConsoleView.display(message);
     }
 }
