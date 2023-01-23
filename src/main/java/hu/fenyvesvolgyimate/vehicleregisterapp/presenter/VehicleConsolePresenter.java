@@ -10,6 +10,8 @@ public class VehicleConsolePresenter implements VehicleUserInterface {
      VehicleDTOParser vehicleParser = new VehicleDTOParser();
      JsonParser jsonParser = new JsonParser();
 
+     VehicleConsoleView view = new VehicleConsoleView();
+
     @Override
     public void displayVehicle(String json) {
         VehicleDTO vehicleDTO = vehicleParser.parseJsonToVehicleDTO(json);
@@ -25,12 +27,12 @@ public class VehicleConsolePresenter implements VehicleUserInterface {
                 vehicleDTO.getModel(),
                 vehicleDTO.getNumberOfSeats(),
                 vehicleDTO.getVehicleType());
-        VehicleConsoleView.display(message);
+        view.display(message);
     }
 
     @Override
     public void displayMessage(String json) {
         String message = jsonParser.parseStringValueFromJsonStringByKey(json, "message");
-        VehicleConsoleView.display(message);
+        view.display(message);
     }
 }

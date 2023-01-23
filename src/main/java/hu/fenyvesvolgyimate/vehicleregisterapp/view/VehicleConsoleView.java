@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class VehicleConsoleView {
     Scanner sc;
 
+    public VehicleConsoleView(){};
+
     public VehicleConsoleView(VehicleController vehicleController){
         this.vehicleController = vehicleController;
     }
@@ -62,7 +64,7 @@ public class VehicleConsoleView {
         vehicleController.registerVehicle(vehicleDTO);
     }
 
-    public static void display(String message){
+    public void display(String message){
         System.out.println(message);
     }
 }
