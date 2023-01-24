@@ -22,11 +22,13 @@ public class VehiclePresenterImpl implements VehiclePresenter {
                 model : %s
                 ülések száma : %d
                 típus : %s
+                környezetvédelmi osztályba sorolás: %s
                 """.formatted(vehicleDTO.getRegistrationNumber(),
                 vehicleDTO.getMake(),
                 vehicleDTO.getModel(),
                 vehicleDTO.getNumberOfSeats(),
-                vehicleDTO.getVehicleType());
+                vehicleDTO.getVehicleType(),
+                vehicleDTO.getMotorEmissionType());
         view.display(message);
     }
 

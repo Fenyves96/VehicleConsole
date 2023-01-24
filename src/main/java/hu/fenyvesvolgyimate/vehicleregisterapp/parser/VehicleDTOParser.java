@@ -12,6 +12,7 @@ public class VehicleDTOParser {
         String model = parseModel(json);
         int numberOfSeats = parseNumberOfSeats(json);
         String type = parseType(json);
+        String motorEmissionType = parseMotorEmissionType(json);
 
         VehicleDTO vehicle = new VehicleDTO();
         vehicle.setRegistrationNumber(registrationNumber);
@@ -19,6 +20,7 @@ public class VehicleDTOParser {
         vehicle.setModel(model);
         vehicle.setNumberOfSeats(numberOfSeats);
         vehicle.setVehicleType(type);
+        vehicle.setMotorEmissionType(motorEmissionType);
 
         return vehicle;
     }
@@ -43,6 +45,10 @@ public class VehicleDTOParser {
         return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson, "make");
     }
 
+    private String parseMotorEmissionType(String vehicleJson) {
+        return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson, "motorEmissionType");
+    }
+
     public String parseVehicleDTOToJson(VehicleDTO vehicleDTO) {
         JSONObject jsonObject = new JSONObject();
         try {
@@ -51,6 +57,7 @@ public class VehicleDTOParser {
             jsonObject.put("model", vehicleDTO.getModel());
             jsonObject.put("numberOfSeats", vehicleDTO.getNumberOfSeats());
             jsonObject.put("type", vehicleDTO.getVehicleType());
+            jsonObject.put("motorEmissionType", vehicleDTO.getMotorEmissionType());
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }

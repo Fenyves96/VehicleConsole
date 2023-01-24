@@ -54,6 +54,8 @@ public class VehicleConsoleView {
         int numberOfSeats = sc.nextInt();
         System.out.print("típus : ");
         String vehicleType = sc.next();
+        System.out.print("környezetvédelmi osztályba sorolás : ");
+        String motorEmissionType = sc.next();
 
         VehicleDTO vehicleDTO = new VehicleDTO();
         vehicleDTO.setRegistrationNumber(registrationNumber);
@@ -61,6 +63,7 @@ public class VehicleConsoleView {
         vehicleDTO.setModel(model);
         vehicleDTO.setNumberOfSeats(numberOfSeats);
         vehicleDTO.setVehicleType(vehicleType);
+        vehicleDTO.setMotorEmissionType(motorEmissionType);
         vehicleController.registerVehicle(vehicleDTO);
     }
 
